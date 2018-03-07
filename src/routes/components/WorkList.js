@@ -4,45 +4,41 @@ import axios from 'axios';
 
 class WorkList extends Component {
   constructor() {
-     super();
-     this.state = {
-        data: []
-     }
-   }
+    super();
+    this.state = {
+      title: '',
+      body: '',
+      client: '',
+      image: ''
+    }
+  }
 
    // calling the componentDidMount() method after a component is rendered for the first time
   componentDidMount() {
-    var th = this;
-    this.serverRequest = axios.get("http://dev-d8react.pantheonsite.io/api/boxwork")
-    .then(function(results) {
-       th.setState({
-         data: results.data
-       });
-     })
+    console.log(this.props);
+    // let id = '';
+    // if (this.props.match.params.id !== undefined) {
+    //   id = this.props.match.params.id;
+    // }
+    // var self = this;
+    // this.serverRequest = axios.get('http://dev-d8react.pantheonsite.io/node/' + id + '?_format=hal_json')
+    // .then(function(result){
+    //   self.setState({
+    //     title: result.data.title["0"].value,
+    //     body: result.data.body["0"].value,
+    //     client: result.data.field_client_work["0"].value
+    //   });
+    // })
    }
 
   render() {
-    var itemData = []
-    this.state.data.forEach((item, index) => {
-      itemData.push(
-       <div className="grid-content__item">
-         <div className="grid-content__link"><Link to={"work/" + item.nid[0].value }>Read More</Link></div>
-         <div className="grid-content__image"><img src={item.field_image_work[0].url} alt="FFW image" width="760" height="760" /></div>
-         <div className="grid-content__group">
-           <h4 className="grid-content__title">{item.title[0].value}</h4>
-           <div className="grid-content__subtitle">{item.field_client_work[0].value}</div>
-         </div>
-       </div>);
-    })
-
     return (
-      <div className="grid-content grid-content--space-big ">
-        <div className="container">
-          <h3 className="grid-content__heading">Our Work</h3>
-          <div className="grid-content__inner">
-            {itemData}
+      <div>
+        <div class="article-title text--center">
+          <div class="container">
+            <div class="article-title__datetime">{this.state.client}</div>
+            <h1 class="article-title__heading">{this.state.title}</h1>
           </div>
-          <div className="grid-content__readmore"><Link to="/work" className="btn">See more projects</Link></div>
         </div>
       </div>
     );

@@ -12,7 +12,7 @@ class Header extends Component {
           <nav className="navigation menu--main">
             <ul className="menu header__nav">
               <li><Link to="/">Home</Link></li>
-              <li><Link to="work">Work</Link></li>
+              <li><Link to="/work">Work</Link></li>
             </ul>
           </nav>
         </div>

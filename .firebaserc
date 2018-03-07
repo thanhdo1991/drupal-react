@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "react-drupal"
+    "default": "drupal8-reactjs"
   }
 }

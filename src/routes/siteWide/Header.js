@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="container">
-          <a className="header__logo" href="/" title="Logo"><img src={logo} alt=''/></a>
+          <Link className="header__logo" to="/" label="logo"><img src={logo} alt=''/></Link>
           <nav className="navigation menu--main">
             <ul className="menu header__nav">
               <li><Link to="/">Home</Link></li>

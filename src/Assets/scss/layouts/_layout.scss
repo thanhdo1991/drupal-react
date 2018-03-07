@@ -15,7 +15,7 @@
 
 //Enable font-smoothing
 html {
-  font-family: 'MarkWebPro',serif;
+  @include MarkWebPro;
   font-weight: 400;
   font-size: $base-font-size; // Don't modify static unit.
   -moz-osx-font-smoothing: grayscale;

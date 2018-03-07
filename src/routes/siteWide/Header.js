@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-
-import {
-  Link
-} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import logo from '../../Assets/images/logo.svg';
 
@@ -15,6 +12,7 @@ class Header extends Component {
           <nav className="navigation menu--main">
             <ul className="menu header__nav">
               <li><Link to="/">Home</Link></li>
+              <li><Link to="work">Work</Link></li>
             </ul>
           </nav>
         </div>

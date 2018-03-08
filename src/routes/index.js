@@ -8,6 +8,7 @@ import {
 import Home from './pages/Home';
 import Work from './pages/Work';
 import WorkDetailPage from './pages/WorkDetailPage';
+import Contact from './pages/Contact';
 
 // Css
 import '../Assets/css/styles.min.css';
@@ -18,6 +19,7 @@ export default () => (
     <div>
       <Route exact path="/" component={Home}/>
       <Route exact path="/work" component={Work}/>
+      <Route exact path="/contact" component={Contact}/>
       <Route path="/work/:id" component={WorkDetailPage} />
     </div>
   </Router>
